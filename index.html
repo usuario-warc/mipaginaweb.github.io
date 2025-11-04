@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../playa el tunco/style.css">
+    <title>Playa El Tunco - Surf & Relax</title>
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="logo">El Tunco</div>
+        <ul class="nav-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#experiencias">Experiencias</a></li>
+            <li><a href="#galeria">Galería</a></li>
+            <li><a href="#hospedaje">Hospedaje</a></li>
+        </ul>
+        <button class="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Hero / Inicio -->
+    <header id="inicio" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content animate-fade">
+            <h1>Descubre Playa El Tunco</h1>
+            <p>El lugar donde las olas, la arena y el atardecer se encuentran</p>
+            <a href="#experiencias" class="btn-primary">Explorar Ahora</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Sección de Experiencias -->
+        <section id="experiencias" class="section experiencias">
+            <h2 class="section-title animate-slide-up">Vive la Experiencia</h2>
+            <p class="section-subtitle animate-slide-up">Aventura, cultura y descanso en un solo lugar</p>
+            <div class="cards">
+                <div class="card animate-zoom">
+                    <img src="../playa el tunco/Surf en El Tunco.jpg" alt="Surf en El Tunco">
+                    <div class="card-content">
+                        <h3>Surf y Olas</h3>
+                        <p>Reconocida mundialmente por su oleaje perfecto, Playa El Tunco es el paraíso del surf.</p>
+                    </div>
+                </div>
+                <div class="card animate-zoom delay">
+                    <img src="../playa el tunco/Atardecer en El Tunco.jpg" alt="Atardecer en El Tunco">
+                    <div class="card-content">
+                        <h3>Atardeceres de Ensueño</h3>
+                        <p>Disfruta del mejor espectáculo natural cada tarde con el sol cayendo sobre el Pacífico.</p>
+                    </div>
+                </div>
+                <div class="card animate-zoom delay-2">
+                    <img src="../playa el tunco/Gastronomía costera.png" alt="Gastronomía costera">
+                    <div class="card-content">
+                        <h3>Gastronomía Local</h3>
+                        <p>Sabores frescos del mar y recetas locales te esperan en los restaurantes frente a la playa.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Galería -->
+        <section id="galeria" class="section galeria">
+            <h2 class="section-title animate-slide-up">Galería</h2>
+            <p class="section-subtitle animate-slide-up">Un vistazo a la belleza del Tunco</p>
+            <div class="gallery-grid">
+                <img src="../playa el tunco/images 1.jpg" alt="Playa" class="animate-fade">
+                <img src="../playa el tunco/Surf en El Tunco.jpg" alt="Tabla de surf" class="animate-fade delay">
+                <img src="../playa el tunco/osdhfohf.jpg" alt="Noche en la playa" class="animate-fade delay-2">
+                <img src="../playa el tunco/images 4.jpg" alt="Formaciones rocosas" class="animate-fade delay-3">
+                <img src="../playa el tunco/images 3.jpg" alt="Cóctel tropical" class="animate-fade delay-4">
+                <img src="../playa el tunco/16.jpg" alt="Palmeras al atardecer" class="animate-fade delay-5">
+            </div>
+        </section>
+
+        <!-- Sección de Hospedaje -->
+        <section id="hospedaje" class="section hospedaje">
+            <h2 class="section-title animate-slide-up">Hospedaje</h2>
+            <p class="section-subtitle animate-slide-up">Descansa frente al sonido del mar</p>
+            <div class="cards">
+                <div class="card animate-zoom">
+                    <img src="../playa el tunco/Hotel frente al mar.jpg" alt="Hotel frente al mar">
+                    <div class="card-content">
+                        <h3>Surf Paradise Hotel</h3>
+                        <p>Habitaciones modernas con vista al mar, piscina infinita y restaurante gourmet.</p>
+                    </div>
+                </div>
+                <div class="card animate-zoom delay">
+                    <img src="../playa el tunco/Bungaló tropical.jpg" alt="Bungaló tropical">
+                    <div class="card-content">
+                        <h3>Bungalós El Tunquito</h3>
+                        <p>Ambiente rústico y acogedor rodeado de palmeras y senderos naturales.</p>
+                    </div>
+                </div>
+                <div class="card animate-zoom delay-2">
+                    <img src="../playa el tunco/Eco-lodge en la playa.jpg" alt="Eco-lodge en la playa">
+                    <div class="card-content">
+                        <h3>EcoLodge WaveHouse</h3>
+                        <p>Una experiencia sustentable en armonía con la naturaleza costera.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <p>&copy; 2025 Playa El Tunco. Vive la ola, siente la libertad.</p>
+    </footer>
+
+    <!-- Script -->
+    <script>
+        // Menú responsive
+        document.querySelector('.burger').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // Animaciones al hacer scroll
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        });
+        document.querySelectorAll('.animate-fade, .animate-slide-up, .animate-zoom')
+            .forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
